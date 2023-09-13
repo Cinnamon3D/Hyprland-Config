@@ -3,6 +3,7 @@ zypper update
 
 #Install main GUI programs
 zypper install hyprland kitty wofi thunar blueman emacs breeze5-cursors
+zypper install --no-recommends lxappearance
 
 #Install main CLI programs
 zypper install flatpak zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal-hyprland network-manager
