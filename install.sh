@@ -2,14 +2,14 @@ sudo su
 zypper update
 
 #Install main GUI programs
-zypper install hyprland alacritty wofi thunar flatpak zip unzip neofetch blueman emacs
+zypper install google-chrome-stable hyprland kitty wofi thunar blueman nwg-look emacs breeze-cursor-theme 
 
-#Find a pulkit, wallpaper setter, gtk theme selector, btop, breeze-cursor-theme, topbar, volume and brightness, screen lock, 
+#Install main CLI programs
+zypper install flatpak zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal-hyprland
+
+#Find a pulkit, volume and brightness, screen lock,
 
 systemctl enable bluetooth
 systemctl start bluetooth
 
-zypper install google-chrome
-zypper install nwg-look swaybg
-
-mv "hyprland.conf" "$HOME/.config/hypr/"
+mv hyprland.conf ~/.config/hypr/
