@@ -14,6 +14,6 @@ cd yay
 makepkg -si
 
 yay -S google-chrome
-yay -S nwg-look
+yay -S nwg-look swaybg
 
-mv "hyprland.conf" "$HOME/.config/hypr/hyprland"
+mv "hyprland.conf" "$HOME/.config/hypr/"
