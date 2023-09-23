@@ -66,4 +66,5 @@ systemctl start NetworkManager
 
 mv hyprland.conf /$GOME/.config/hypr/
 mv Wallpaper.jpg /$HOME/.config/hypr/
-mv kitty.com /$HOMW/.config/kitty
+mv kitty.conf /$HOMW/.config/kitty
+mv dunstrc /$HOMW/.config/dunst
