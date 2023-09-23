@@ -20,6 +20,7 @@ systemctl start NetworkManager
 
 mv hyprland.conf /$GOME/.config/hypr/
 mv Wallpaper.jpg /$HOME/.config/hypr/
+mv kitty.com /$HOMW/.config/kitty
 
 pacman -Syu
 yay -Syu
