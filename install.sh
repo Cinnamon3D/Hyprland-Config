@@ -39,10 +39,19 @@ elif [ "$package_manager" = "pacman" ]; then
     yay -Syu
 
 elif [ "$package_manager" = "dnf" ]; then
-    sudo dnf install -y 
+    dnf install -y hyprland kitty wofi thunar blueman emacs breeze5-cursors
+    dnf install -y --no-recommends lxappearance
+    dnf install -y flatpak zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal-hyprland network-manager
     
 elif [ "$package_manager" = "zypper" ]; then
-    sudo zypper install -y 
+    sudo zypper install -y zypper install hyprland kitty wofi thunar blueman emacs breeze5-cursors
+    zypper install -y --no-recommends lxappearance
+    zypper install -y flatpak zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal-hyprland network-manager
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub > linux_signing_key.pub
+    rpm --import linux_signing_key.pub
+    zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
+    zypper refresh
+    zypper install google-chrome-stable
     
 elif [ "$package_manager" = "pkg" ]; then
     pkg install hyprland kitty wofi pcmanfm blueman bluez nwg-look firefox
