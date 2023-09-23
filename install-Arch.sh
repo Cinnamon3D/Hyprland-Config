@@ -1,8 +1,8 @@
 #Install main GUI programs
-zypper install hyprland kitty wofi thunar blueman
+pacman -S install hyprland kitty wofi thunar blueman
 
 #Install main CLI programs
-sudo pacman -S flatpak zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal-hyprland network-manager
+pacman -S flatpak zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal-hyprland network-manager
 
 #Install yay
 git clone https://aur.archlinux.org/yay.git
@@ -18,8 +18,8 @@ systemctl start Bluetooth
 systemctl enable NetworkManager
 systemctl start NetworkManager
 
-mv hyprland.conf $HOME~/.config/hypr/
-mv Wallpaper.jpg $HOME~/.config/hypr/
+mv hyprland.conf /$GOME/.config/hypr/
+mv Wallpaper.jpg /$HOME/.config/hypr/
 
-sudo pacman -Syu
+pacman -Syu
 yay -Syu
