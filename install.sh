@@ -1,16 +1,19 @@
-#!/bin/bash
-
 # Detect the package manager
 if command -v apt &>/dev/null; then
     package_manager="apt"
+    
 elif command -v pacman &>/dev/null; then
     package_manager="pacman"
+    
 elif command -v dnf &>/dev/null; then
     package_manager="dnf"
+    
 elif command -v zypper &>/dev/null; then
     package_manager="zypper"
+    
 elif command -v pkg &>/dev/null; then
     package_manager="pkg"
+    
 else
     echo "Unsupported package manager"
     exit 1
@@ -19,7 +22,8 @@ fi
 # Install packages
 if [ "$package_manager" = "apt" ]; then
     apt update
-    apt install -y 
+    apt install -y
+    
 elif [ "$package_manager" = "pacman" ]; then
     pacman -S hyprland kitty wofi thunar blueman
     pacman -S flatpak zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal-hyprland network-manager
@@ -36,8 +40,13 @@ elif [ "$package_manager" = "pacman" ]; then
 
 elif [ "$package_manager" = "dnf" ]; then
     sudo dnf install -y 
+    
 elif [ "$package_manager" = "zypper" ]; then
     sudo zypper install -y 
+    
+elif [ "$package_manager" = "pkg" ]; then
+    pkg install hyprland kitty wofi pcmanfm blueman bluez nwg-look firefox
+    pkg install zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal network-manager
 fi
 
 systemctl enable Bluetooth
