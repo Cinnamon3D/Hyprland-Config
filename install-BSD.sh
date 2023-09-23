@@ -1,10 +1,10 @@
-sudo pkg update
+pkg update
 
 #Install main GUI programs
-sudo pkg install hyprland kitty wofi pcmanfm blueman bluez nwg-look firefox
+pkg install hyprland kitty wofi pcmanfm blueman bluez nwg-look firefox
 
 #Install main CLI programs
-sudo pkg install zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal network-manager
+pkg install zip unzip neofetch bluez swaybg btop polkit-gnome pamixer brightnessctl dunst pipewire xdg-desktop-portal network-manager
 
 systemctl enable Bluetooth
 systemctl start Bluetooth
