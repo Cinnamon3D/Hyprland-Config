@@ -6,13 +6,14 @@
 #_____________________________________________________________________________
 
 echo "Installing Hyprland and needed packages..."
-sudo pkg install kitty hyprland xdg-desktop-portal-hyprland drm-kmod seatd
+sudo pkg install kitty hyprland xdg-desktop-portal-hyprland drm-kmod seatd socket wlroots
 
 echo "Enabling Services..."
 export XDG_RUNTIME_DIR=/run/user/`id -u`
 echo "export XDG_RUNTIME_DIR=/run/user/$(id -u)" >> ~/.shrc
-sysrc seatd_enable=”YES”
-service seatd start
+sudo sysrc seatd_enable=”YES”
+sudo service seatd start
+echo "sudo service seatd start" >> ~/.shrc
 pw groupmod video -m cinnamon
 
 #_____________________________________________________________________________
