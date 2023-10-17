@@ -9,7 +9,8 @@ echo "Installing Hyprland and needed packages..."
 sudo pkg install kitty hyprland xdg-desktop-portal-hyprland drm-kmod seatd
 
 echo "Enabling Services..."
-export XDG_RUNTIME_DIR=/var/run/user/`id -u`
+export XDG_RUNTIME_DIR=/run/user/`id -u`
+echo "export XDG_RUNTIME_DIR=/run/user/$(id -u)" >> ~/.shrc
 sysrc seatd_enable=”YES”
 service seatd start
 pw groupmod video -m cinnamon
