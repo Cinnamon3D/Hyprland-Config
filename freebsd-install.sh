@@ -44,3 +44,4 @@ fi
 
 #_____________________________________________________________________________
 
+#Still need to add all packages to install, UI configs, and Wifi drivers, to the script
