@@ -21,7 +21,7 @@ read response
 
 if [[ "$response" == "yes" ]]; then
     echo "Installing optional packages..."
-    sudo pkg install ranger btop neofetch
+    sudo pkg install py39-ranger btop neofetch
 elif [[ "$response" == "no" ]]; then
     echo "Okay, skipping..."
 else
