@@ -14,7 +14,7 @@ echo "export XDG_RUNTIME_DIR=/run/user/$(id -u)" >> ~/.shrc
 sudo sysrc seatd_enable=”YES”
 sudo service seatd start
 echo "sudo service seatd start" >> ~/.shrc
-pw groupmod video -m cinnamon
+sudo pw groupmod video -m cinnamon
 
 #_____________________________________________________________________________
 
