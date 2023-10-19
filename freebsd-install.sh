@@ -5,8 +5,8 @@
 
 #_____________________________________________________________________________
 
-echo "Installing Hyprland and needed packages..."
-sudo pkg install kitty hyprland xdg-desktop-portal-hyprland wayland drm-kmod seatd socket wlroots drm-510-kmod
+echo "Installing wayland and needed packages..."
+sudo pkg install wayland drm-kmod seatd socket wlroots drm-510-kmod
 
 echo "Enabling Services..."
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
