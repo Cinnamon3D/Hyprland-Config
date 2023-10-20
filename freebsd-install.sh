@@ -6,14 +6,14 @@
 #_____________________________________________________________________________
 
 echo "Installing wayland and needed packages..."
-sudo pkg install wayland drm-kmod seatd socket wlroots drm-510-kmod
+sudo pkg install wayland seatd socket wlroots drm-510-kmod elogind
 
 echo "Enabling Services..."
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 echo "export XDG_RUNTIME_DIR=/var/run/user/`id -u`" >> ~/.shrc
-sudo sysrc seatd_enable=”YES”
-sudo service seatd start
-echo "sudo service seatd start" >> ~/.shrc
+sudo service elogind start
+sudo sysrc elogind_enable="YES"
+#echo "sudo service elogind start" >> ~/.shrc
 sudo pw groupmod video -m cinnamon
 sudo echo "kld_list="drm-510-kmod"" >> /etc/rc.conf
 
