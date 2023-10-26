@@ -64,7 +64,10 @@ systemctl start Bluetooth
 systemctl enable NetworkManager
 systemctl start NetworkManager
 
-mv hyprland.conf /$GOME/.config/hypr/
-mv Wallpaper.jpg /$HOME/.config/hypr/
-mv kitty.conf /$HOMW/.config/kitty
-mv dunstrc /$HOMW/.config/dunst
+mkdir -p "$HOME/.config/hypr"
+mv "hyprland.conf" "/$HOME/.config/hypr/"
+mv "Wallpaper.jpg" "/$HOME/.config/hypr/"
+mkdir -p "$HOME/.config/kitty"
+mv "kitty.conf" "/$HOME/.config/kitty"
+mkdir -p "$HOME/.config/dunst"
+mv "dunstrc" "/$HOMW/.config/dunst"
